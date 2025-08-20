@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   mysql:
-    image: mysql:8.0.39
+    image: mariadb:10.11 # lts version of MariaDB
     container_name: my_mysql
     restart: unless-stopped
     environment:
@@ -41,18 +41,6 @@ services:
       - "5432:5432"
     volumes:
       - ./data/postgres:/var/lib/postgresql/data
-
-  pgadmin:
-    image: dpage/pgadmin4:8.12
-    container_name: my_pgadmin
-    restart: unless-stopped
-    environment:
-      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
-      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
-    ports:
-      - "8081:80"
-    depends_on:
-      - postgres
 
   mongo:
     image: mongo:7.0.12
