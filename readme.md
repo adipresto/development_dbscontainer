@@ -5,9 +5,10 @@ For personal development on Windows, you can use portable runtimes such as Larag
 However, for team development or production deployment, using containers (e.g., Docker or Podman) is recommended since they provide a more consistent, replicable, and isolated environment.
 
 ## Ports
-| Service      | Default Port | Host Access (localhost) | Notes                                                                       |
-| ------------ | ------------ | ----------------------- | --------------------------------------------------------------------------- |
-| **MySQL**    | `3306`       | `localhost:3306`        | Accessible from apps/DB clients (e.g., MySQL Workbench, DBeaver).           |
-| **Postgres** | `5432`       | `localhost:5432`        | Accessible from apps/DB clients (e.g., psql, DBeaver).                      |
-| **MongoDB**  | `27017`      | `localhost:27017`       | Accessible from MongoDB clients (e.g., MongoDB Compass, mongosh).           |
-| **Adminer**  | `8080`       | `http://localhost:8080` | Web-based GUI for managing databases (MySQL & PostgreSQL, **not MongoDB**). |
+| Service      | Default Port | Host Access (localhost) | Adminer Access | Notes                                                                       |
+| ------------ | ------------ | ----------------------- | -------------- | --------------------------------------------------------------------------- |
+| **MySQL**    | `3306`       | `localhost:3306` | `mysql`        | Accessible from apps/DB clients (e.g., MySQL Workbench, DBeaver).           |
+| **Postgres** | `5432`       | `localhost:5432` | `postgres`       | Accessible from apps/DB clients (e.g., psql, DBeaver).                      |
+| **MongoDB**  | `27017`      | `localhost:27017`| `mongo` (can't access)       | Accessible from MongoDB clients (e.g., MongoDB Compass, mongosh).           |
+| **Adminer**  | `8080`       | `http://localhost:8083` | `-` | Web-based GUI for managing databases (MySQL & PostgreSQL, **not MongoDB**). |
+| **Mongo Express**  | `8081`       | `http://localhost:8082` | `-` | Web-based GUI for managing MongoDB. |
