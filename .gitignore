@@ -1,0 +1,4 @@
+.env
+data/mongo/*
+data/mysql/*
+data/postgres/*
